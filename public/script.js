@@ -37,7 +37,7 @@ function fillData(data) {
     const sunArr = ['Local time: ','Sunrise: ','Sunset: ','Solar noon: '];
     const sunValArr = [data.time, data.sunrise, data.sunset, data.solar_noon];
     const moonArr = ['Local time: ','Moonrise: ','Moonset: ','Distance: '];
-    const moonValArr = [data.time, data.moonrise, data.moonset, data.moon_phase];
+    const moonValArr = [data.time, data.moonrise, data.moonset, data.moon_distance];
     const toggle = document.querySelector('.toggle button');
     const title = document.querySelectorAll('.toggle b');
     
