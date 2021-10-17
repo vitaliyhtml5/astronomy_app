@@ -27,7 +27,7 @@ const getAstroData = (cityValue, callback) => {
             sun_altitude: resData.body.sun_altitude,
             moonrise: timeData[4],
             moonset: timeData[5],
-            moon_phase: moonDistance,
+            moon_distance: moonDistance,
             moon_altitude: resData.body.moon_altitude,
             day_time:  dayTime
         });
