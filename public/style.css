@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 ul li {
     list-style-type: none;
@@ -87,10 +88,14 @@ button:active {
     background: url(img/landscape.png) 0 80px/cover no-repeat;
 }
 h2 {
+    overflow: hidden;
+    width: 300px;
     margin-bottom: 15px;
     color: #4169e1;
     font-size: 36px;
     letter-spacing: 1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .content-data {
     width: 200px;
@@ -242,6 +247,9 @@ h2 {
     h1 {
         padding-bottom: 20px;
         font-size: 30px;
+    }
+    h2 {
+        width: 240px;
     }
     input {
         width: 210px;
