@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Astronomy application</h1>
         <form>
-            <input type="text" placeholder="Type a city">
+            <input type="text" id="city" placeholder="Type a city">
             <button>Confirm</button>
         </form>
         <div class="content">
@@ -49,6 +49,18 @@
             <button class="toggle-left"></button>
             <b>Moon</b>
         </div>
+        <aside class="fav-menu">
+            <div class="fav-main">
+                <h3>Favorite cities:</h3>
+                <button class="close-btn"></button>
+                <div class="fav-cities"></div>
+            </div>
+            <span class="add-fav">Add the city</span>
+        </aside>
+        <button class="open-btn"></button>
+        <footer>
+            <p>Folow the link to <a href="https://vitaliyhtml5-weather-app.herokuapp.com/">Weather application</a></p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
