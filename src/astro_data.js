@@ -12,9 +12,9 @@ const getAstroData = (cityValue, callback) => {
         const curTime = timeData[0].slice(0,5);
         const moonDistance = String(Math.floor(resData.body.moon_distance)).slice(0,3);
 
-        if ((localTime-sunRise >= -4500 && localTime-sunRise <= 4500) || (localTime-sunSet >= -4500 && localTime-sunSet <= 4500)) {
+        if ((localTime-sunRise >= -6000 && localTime-sunRise <= 6000) || (localTime-sunSet >= -6000 && localTime-sunSet <= 6000)) {
             dayTime ='twilight';
-        } else if (localTime-sunRise < -4500 || localTime-sunSet > 4500) {
+        } else if (localTime-sunRise < -6000 || localTime-sunSet > 6000) {
             dayTime = 'night';
         } else  {
             dayTime = 'day';
@@ -25,13 +25,13 @@ const getAstroData = (cityValue, callback) => {
             time: curTime,
             sunrise: timeData[1],
             sunset: timeData[2],
-            solar_noon: timeData[3],
-            sun_altitude: resData.body.sun_altitude,
+            solarNoon: timeData[3],
+            sunAltitude: resData.body.sun_altitude.toFixed(2),
             moonrise: timeData[4],
             moonset: timeData[5],
-            moon_distance: moonDistance,
-            moon_altitude: resData.body.moon_altitude,
-            day_time:  dayTime
+            moonDistance: moonDistance,
+            moonAltitude: resData.body.moon_altitude.toFixed(2),
+            dayTime:  dayTime
         });
     });
    

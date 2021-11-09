@@ -42,13 +42,13 @@ function fillData(data) {
     const headerData = document.querySelectorAll('.content-data th');
     const contentData = document.querySelectorAll('.content-data td');
     const sunArr = ['Local time: ','Sunrise: ','Sunset: ','Solar noon: '];
-    const sunValArr = [data.time, data.sunrise, data.sunset, data.solar_noon];
+    const sunValArr = [data.time, data.sunrise, data.sunset, data.solarNoon];
     const moonArr = ['Local time: ','Moonrise: ','Moonset: ','Distance: '];
-    const moonValArr = [data.time, data.moonrise, data.moonset, data.moon_distance];
+    const moonValArr = [data.time, data.moonrise, data.moonset, data.moonDistance];
     const toggle = document.querySelector('.toggle button');
     const title = document.querySelectorAll('.toggle b');
     
-    changeBackground(data.day_time);
+    changeBackground(data.dayTime);
     changeData(sunArr, sunValArr);
     moveToggleDefault();
         
@@ -80,14 +80,14 @@ function fillData(data) {
 }
 
 function showImage(data) {
-    if (data.day_time === 'day' || data.day_time === 'twilight') {
+    if (data.dayTime === 'day' || data.dayTime === 'twilight') {
         imgObject.src = 'img/sun.svg';
         imgObject.style.width = '130px';
-        imgObject.style.bottom = `calc(${roundAltitude(data.sun_altitude)}*2.28%)`;
+        imgObject.style.bottom = `calc(${roundAltitude(data.sunAltitude)}*2.28%)`;
     } else {
         imgObject.src = 'img/moon.svg';
         imgObject.style.width = '100px';
-        imgObject.style.bottom = `calc(${roundAltitude(data.moon_altitude)}*2.28%)`;
+        imgObject.style.bottom = `calc(${roundAltitude(data.moonAltitude)}*2.28%)`;
     }
 
     function roundAltitude(data) {
