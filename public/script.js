@@ -18,7 +18,7 @@ formMain.addEventListener('submit', (e) => {
     }
 });
 
-getData('London');
+getData('Dnipro');
 async function getData(cityValue) {
     loader.style.display = 'block';
     const res = await fetch(`/get_data?city=${cityValue}`);

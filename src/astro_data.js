@@ -12,12 +12,14 @@ const getAstroData = (cityValue, callback) => {
         const curTime = timeData[0].slice(0,5);
         const moonDistance = String(Math.floor(resData.body.moon_distance)).slice(0,3);
 
-        if ((localTime-sunRise >= -6000 && localTime-sunRise <= 6000) || (localTime-sunSet >= -6000 && localTime-sunSet <= 6000)) {
+        if ((localTime-sunRise >= -4500 && localTime-sunRise <= 4500) || (localTime-sunSet >= -4500 && localTime-sunSet <= 4500)) {
             dayTime ='twilight';
-        } else if (localTime-sunRise < -6000 || localTime-sunSet > 6000) {
+        } else if (localTime-sunRise < -4500 || localTime-sunSet > 4500) {
             dayTime = 'night';
-        } else  dayTime = 'day';
-
+        } else  {
+            dayTime = 'day';
+        }
+        
         callback({
             city: cityValue,
             time: curTime,
