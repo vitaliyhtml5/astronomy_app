@@ -196,11 +196,11 @@ h2 {
     background-color: #fad1df;
 }
 .error-wrap h3 {
-    margin: 50px 0;
-    font-size: 24px;
+    margin: 40px 0;
+    font-size: 26px;
 }
 .error-wrap img {
-    width: 28%;
+    width: 40%;
 }
 .loader {
     position: absolute;
@@ -239,7 +239,7 @@ h2 {
         width: 100px;
     }
     .error-wrap img {
-        width: 35%;
+        width: 65%;
     }
 }
 
@@ -264,9 +264,6 @@ h2 {
     }
     .object-way img {
         width: 80px;
-    }
-    .error-wrap img {
-        width: 45%;
     }
 }
 
