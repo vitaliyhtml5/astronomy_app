@@ -1,6 +1,7 @@
 {
-    "baseUrl": "http://127.0.0.1:3000",
-    "chromeWebSecurity": false,
-    "screenshotOnRunFailure": false,
-    "video": false
+  "baseUrl": "http://127.0.0.1:3000",
+  "chromeWebSecurity": false,
+  "screenshotOnRunFailure": false,
+  "video": false,
+  "projectId": "c2pmfb"
 }
