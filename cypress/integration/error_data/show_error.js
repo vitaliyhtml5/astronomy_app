@@ -3,10 +3,7 @@
 describe('Show error in case of incorrect data', () => {
     let random = length => Math.floor(Math.random() * length);
     before(() => cy.fixture('city_data').then(data => globalThis.data = data));
-    beforeEach(() => {
-        cy.visit('/');
-        cy.clearLocalStorage();
-    });
+    beforeEach(() => cy.visit('/'));
 
     it('User uses non-english chars', () => {
         const city = data.incorrectData.nonEnglish[random(data.incorrectData.nonEnglish.length)];

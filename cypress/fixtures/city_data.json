@@ -1,6 +1,5 @@
 {
     "city": ["Dnipro", "Kharkiv", "Kyiv", "Minsk", "Lviv", "London", "Paris", "Antarctica", "Sydney"],
-    "cityWithSymbols": ["Ivano-Frankivsk", "New%20York"],
     "incorrectData": {
         "nonEnglish": ["Киев", "Chișinău", "Мінск", "Львів", "León", "北京", "دبي"],
         "notChars": ["1", "056", "5248","!", "?", ":", ".", ",", ";", "@", ")", "(", "+","*", "&", "City125", "clear&Sea", "124%"]

@@ -78,6 +78,13 @@ describe('User gets astronomy data', () => {
         }); 
     });
 
+    it('User gets data if Favorite city is set', () => {
+        const city = data.city[random(data.city.length)];
+        localStorage.setItem('favCity', city);
+        cy.intercept(`http://127.0.0.1:3000/get_data?city=${city}`).as('getRes');
+        cy.reload();
+        cy.get('h2').should('have.text', city);
+    });
 
     it('User navigates to Weather app successfully', () => {
         cy.contains('a', 'Weather application').click();
