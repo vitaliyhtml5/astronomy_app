@@ -21,7 +21,13 @@ formMain.addEventListener('submit', (e) => {
     }
 });
 
-getData('Dnipro');
+if (localStorage.getItem('favCity') !== null) {
+    const cityStorage = localStorage.getItem('favCity').split(',');
+    getData(cityStorage[0]);
+} else {
+    getData('Dnipro');
+}
+
 async function getData(cityValue) {
     loader.style.display = 'block';
     const res = await fetch(`/get_data?city=${cityValue}`);

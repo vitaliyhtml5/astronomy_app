@@ -78,6 +78,7 @@ describe('User gets astronomy data', () => {
         }); 
     });
 
+
     it('User navigates to Weather app successfully', () => {
         cy.contains('a', 'Weather application').click();
         cy.url().should('include', 'weather-app');
