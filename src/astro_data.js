@@ -1,7 +1,7 @@
 const request = require('request');
 
 const getAstroData = (cityValue, callback) => {
-    const urlReq = `https://api.ipgeolocation.io/astronomy?apiKey=abd6fe44dc664d66903bda88f8a7dbee&location=${cityValue}'`
+    const urlReq = `https://api.ipgeolocation.io/astronomy?apiKey=&location=${cityValue}'`
     request({url: urlReq, json: true}, (errData, resData) => {
         const timeDataTemp = [resData.body.current_time,resData.body.sunrise,resData.body.sunset,resData.body.solar_noon, resData.body.moonrise, resData.body.moonset];
         const timeData = timeDataTemp.map(item => item.replace(':','-'));
